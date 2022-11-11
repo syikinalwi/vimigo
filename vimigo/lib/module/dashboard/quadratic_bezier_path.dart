@@ -46,7 +46,7 @@ class QuadraticBezierPath extends CustomPainter {
     Path path40 = Path();
     path40.moveTo(size.width / 2, size.height / 5 * 3);
     path40.quadraticBezierTo(
-        size.width / 8, size.height / 1.6, size.width / 2, size.height / 5 * 4);
+        size.width / 8, size.height / 1.5, size.width / 2, size.height / 5 * 4);
     canvas.drawPath(path40, paint40);
 
     Paint paint50 = Paint()

@@ -60,16 +60,11 @@ class DashboardPage extends GetView<DashboardController> {
                           color: Colors.grey,
                           width: 1,
                           style: BorderStyle.solid),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10.0),
-                        topRight: Radius.circular(10.0),
-                        bottomLeft: Radius.circular(10.0),
-                        bottomRight: Radius.circular(10.0),
-                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
-                          offset: const Offset(
+                          offset: Offset(
                             1,
                             1,
                           ),
@@ -78,7 +73,7 @@ class DashboardPage extends GetView<DashboardController> {
                         ),
                         BoxShadow(
                           color: Colors.white,
-                          offset: const Offset(0.0, 0.0),
+                          offset: Offset(0.0, 0.0),
                           blurRadius: 0.0,
                           spreadRadius: 0.0,
                         ),
@@ -95,7 +90,7 @@ class DashboardPage extends GetView<DashboardController> {
                           );
                         }),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_drop_down_rounded,
                         color: Colors.black,
                       )
@@ -235,7 +230,7 @@ class DashboardPage extends GetView<DashboardController> {
         // icon
         Positioned(
           right: MediaQuery.of(context).size.width / 5,
-          top: MediaQuery.of(context).size.height / 8 * 5,
+          top: MediaQuery.of(context).size.height / 8 * 5.5,
           child: InkWell(onTap: () {
             bottomSheet(context, 2);
           }, child: Obx(
@@ -259,7 +254,7 @@ class DashboardPage extends GetView<DashboardController> {
         // content
         Positioned(
             right: MediaQuery.of(context).size.width / 2,
-            top: MediaQuery.of(context).size.height / 8 * 5,
+            top: MediaQuery.of(context).size.height / 8 * 5.5,
             child: Container(
               decoration: BoxDecoration(
                   color: context.colorBgPrimary,
@@ -275,7 +270,7 @@ class DashboardPage extends GetView<DashboardController> {
         // icon
         Positioned(
           right: MediaQuery.of(context).size.width / 4 * 2.2,
-          top: MediaQuery.of(context).size.height / 8 * 6.5,
+          bottom: MediaQuery.of(context).size.height / 8 * 3,
           child: InkWell(onTap: () {
             bottomSheet(context, 3);
           }, child: Obx(
@@ -299,7 +294,7 @@ class DashboardPage extends GetView<DashboardController> {
         // content
         Positioned(
             right: MediaQuery.of(context).size.width / 5,
-            top: MediaQuery.of(context).size.height / 8 * 7,
+            bottom: MediaQuery.of(context).size.height / 8 * 3,
             child: Container(
               decoration: BoxDecoration(
                   color: context.colorBgPrimary,
@@ -315,7 +310,7 @@ class DashboardPage extends GetView<DashboardController> {
         // icon
         Positioned(
           right: MediaQuery.of(context).size.width / 5,
-          top: MediaQuery.of(context).size.height / 8 * 9,
+          bottom: MediaQuery.of(context).size.height / 8,
           child: InkWell(onTap: () {
             bottomSheet(context, 4);
           }, child: Obx(
@@ -339,7 +334,7 @@ class DashboardPage extends GetView<DashboardController> {
         // content
         Positioned(
             right: MediaQuery.of(context).size.width / 2,
-            top: MediaQuery.of(context).size.height / 8 * 9,
+            bottom: MediaQuery.of(context).size.height / 8,
             child: Container(
               decoration: BoxDecoration(
                   color: context.colorBgPrimary,
